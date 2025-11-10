@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Register third-party Tailwind plugins (Tailwind v4 style) */
+@plugin "tailwind-scrollbar";
+
+/* Custom scrollbar styles for textarea */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient {
+  /* Smooth, continuous gradient sweep */
+  animation: gradient-move 6s ease-in-out infinite;
+}
